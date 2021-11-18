@@ -1,0 +1,224 @@
+.specifications {
+  @include adaptive-value("margin-top", 181, 146, 1);
+  @include adaptive-value("margin-bottom", 341, 84, 1);
+  // .specifications__container
+  &__wrapper {
+    padding: 0 1rem;
+    height: 300rem;
+
+    @media (max-width: $s) {
+        height: 357.143rem;
+    }
+  }
+  &__container {
+    position: sticky;
+    top: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $lightGrayColor;
+    border-radius: 3.6rem;
+    max-width: 113rem;
+    margin: 0 auto;
+    height: 70vh;
+
+    @media (max-width: $s) {
+      flex-direction: column;
+      align-items: center;
+      top: 18%;
+      height: 80vh;
+    }
+    @media (max-width: $iphoneMax) {
+      top: 16%;
+
+    }
+    @media (max-width: $xxs) {
+      top: 12%;
+      height: 86vh;
+    }
+  }
+
+  // .specifications__image
+
+  &__image {
+    z-index: 2;
+    margin-top: -4.3rem;
+    position: relative;
+    text-align: center;
+
+    & img {
+      object-fit: contain;
+      width: auto;
+      height: unset;
+      max-height: 100%;
+    }
+    @media (min-width: $s) {
+      margin-bottom: -6.43rem;
+    }
+    @media (max-width: $s) {
+      width: 37%;
+    }
+    @media (max-width: $xs) {
+      width: 32%;
+      transform: translateY(2rem);
+    }
+    @media (max-width: $xxs) {
+      margin-top: 0;
+    }
+    @media (max-width: $xxs) {
+      display: none;
+    }
+  }
+
+  // .specifications__point
+  &__point {
+    @include adaptive-value("width", 12, 10, 1);
+    @include adaptive-value("height", 12, 10, 1);
+    background-color: $blueColor;
+    border-radius: 50%;
+    position: absolute;
+    border: 0.07rem solid $whiteColor;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $lightBlueColor;
+      opacity: 0.16;
+      @include adaptive-value("width", 34, 20, 1);
+      @include adaptive-value("height", 34, 20, 1);
+      border-radius: 50%;
+    }
+
+    &.point_1 {
+      top: 15%;
+      right: 25%;
+    }
+    &.point_2 {
+      top: 42%;
+      right: 30%;
+    }
+    &.point_3 {
+      top: 12%;
+      right: 48%
+    }
+    &.point_4 {
+      top: 35%;
+      right: 50%;
+    }
+    &.point_5 {
+      top: 70%;
+      right: 45%;
+    }
+  }
+  // .specifications__content
+
+  &__content {
+    overflow: hidden;
+    width: 100%;
+    @include adaptive-value("padding-left", 90, 45, 1);
+    @include adaptive-value("padding-right", 70, 20, 1);
+    @include adaptive-value("padding-bottom", 100, 70, 1);
+    @media (max-width: $l) and (min-width: $s) {
+      flex: 70%;
+    }
+    @media (min-width: $s) {
+      max-width: 46.43rem;
+    }
+    @media (max-width: $s) {
+      min-height: 27.6rem;
+      padding-top: 2rem;
+    }
+    @media (max-width: $xs) {
+      padding: 2rem;
+    }
+  }
+
+  // .specifications__title
+
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    line-height: 2.6rem;
+    letter-spacing: -0.02em;
+    z-index: 5;
+    @include adaptive-value("font-size", 30, 24, 1);
+    @include adaptive-value("margin-top", 118, 63, 960);
+    @media (max-width: $s) {
+      position: absolute;
+      top: -7.5rem;
+      left: 0;
+      margin-top: 0;
+    }
+  }
+
+
+  // .specifications__box
+  &__box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    // height: 100%;
+    // position: relative;
+    // height: 20.43rem;
+    // @media (max-width: $iphoneMax) {
+    //   height: 23.43rem;
+    // }
+
+    // @media (max-width: $xxs) {
+    //   height: 28.43rem;
+    // }
+  }
+  // .specifications__box-content
+  &__box-content {
+    z-index: 10;
+  }
+
+  // .specifications__subtitle
+
+  &__subtitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    z-index: 2;
+    position: relative;
+    @include adaptive-value("margin-top", 101, 20, 1);
+    @media (max-width: $iphoneMax) {
+      margin-top: 0;
+    }
+  }
+
+  // .specifications__number
+
+  &__number {
+    position: absolute;
+    z-index: -1;
+    top: -1rem;
+    left: 0;
+    font-family: Merriweather, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 3.3rem;
+    letter-spacing: -0.02em;
+    /* light blue */
+    color: $lightGrayColor;
+    -webkit-text-stroke: 1px $lightBlueColor;
+    @include adaptive-value("font-size", 140, 90, 960);
+    @media (min-width: $s) {
+      left: -11%;
+    }
+  }
+
+  // .specifications__text
+
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 2.3rem;
+    z-index: 2;
+    position: relative;
+    @include adaptive-value("font-size", 18, 16, 1);
+    @include adaptive-value("margin-top", 57, 27, 960);
+  }
+}

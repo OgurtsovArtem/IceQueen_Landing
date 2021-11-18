@@ -1,0 +1,45 @@
+.icons-about {
+  // .icons-about__container
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2.14rem 2.14rem;
+    margin-bottom: 2.85rem;
+
+    @media (max-width: $s) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 1rem;
+    }
+    @media (max-width: $iphoneMax) {
+      grid-template-columns:  1fr;
+      grid-gap: 1.4rem 0;
+    }
+  }
+
+  // .icons-about__block
+
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+
+  // .icons-about__icon
+
+  &__icon {
+    width: 3.5rem;
+    height: 4.2rem;
+    fill: $blueColor;
+  }
+
+  // .icons-about__text
+
+  &__text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-left: .6rem;
+    color: $whiteColor;
+  }
+}

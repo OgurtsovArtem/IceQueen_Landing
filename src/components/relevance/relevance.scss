@@ -1,0 +1,121 @@
+.relevance {
+  // .relevance__container
+  background-image: url(../images/relevance_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  @include adaptive-value("padding-bottom", 132, 55, 1);
+  &__container {
+    display: flex;
+    @include adaptive-value("margin-top", 153, 54, 1);
+
+    @media (max-width: $m) {
+      flex-direction: column;
+    }
+  }
+
+  // .relevance__title
+
+  &__title {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    letter-spacing: -0.02em;
+    max-width: 35.7rem;
+    white-space: nowrap;
+    @media (max-width: $s) {
+      white-space: pre-wrap;
+    }
+    // .relevance__title_accent
+
+    &_accent {
+    }
+  }
+
+  // .relevance__block
+
+  &__block {
+    max-width: 62.4rem;
+    @include adaptive-value("margin-left", 78, 20, 960);
+    @media (max-width: $m) {
+      margin-top: 1.35rem;
+      margin-left: 0;
+    }
+  }
+  // .relevance__text
+
+  &__text {
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+  }
+
+  // .relevance__subtitle
+
+  &__subtitle {
+    // .relevance__subtitle_accent
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 1.64rem;
+    @include adaptive-value("margin-top", 122, 60, 1);
+    &_accent {
+    }
+  }
+
+  // .relevance__icons-block
+
+  &__icons-block {
+    margin-top: 2.85rem;
+  }
+}
+.relevance-icons {
+
+  // .relevance-icons__container
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 3.7rem;
+
+    @media (max-width: $xs) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $xxs) {
+      grid-template-columns:  1fr;
+    }
+  }
+  // .relevance-icons__item
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 18rem;
+    min-height: 12rem;
+    border-left: 0.07rem solid $grayColor;
+    @include adaptive-value("padding-left", 40, 20, 1);
+    @media (max-width: $xxs) {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  // .relevance-icons__icon
+
+  &__icon {
+    // fill: $lightBlueColor;
+    width: 4.6rem;
+    height: 4.6rem;
+  }
+
+  // .relevance-icons__text
+
+  &__text {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-top: 1.35rem;
+    padding-right: 0.5rem;
+  }
+}

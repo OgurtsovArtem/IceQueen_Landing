@@ -1,0 +1,149 @@
+@import './constants.scss';
+
+// Кнопки
+.button {
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.14rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-color: $blueColor;
+  color: $whiteColor;
+  padding: 1.6rem .7rem;
+  border-radius: 2rem;
+  white-space: nowrap;
+  transition: .3s;
+}
+.button:disabled,
+.button[disabled] {
+  background-color: $grayColor;
+  color: #000;
+  cursor: default;
+}
+.button:disabled:hover,
+.button[disabled]:hover {
+  box-shadow: none;
+  opacity: 1;
+}
+.button_light  {
+  background-color: $lightBlueColor;
+}
+.button:hover {
+  opacity: .9;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%)
+}
+
+// Технические классы
+._container {
+	max-width: $maxWidthContainer;
+  width: 100%;
+	padding: 0px 1rem;
+	margin: 0 auto;
+}
+._flex {
+  display: flex;
+}
+._accent {
+  color: $blueColor;
+}
+._animation {
+  opacity: 0;
+  transform: translate(0, 120%);
+  transition: .7s;
+}
+._animation._active-animation {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+._fixed {
+  overflow: hidden;
+}
+._stickySwipeElement {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: auto;
+  left: auto;
+  height: 0;
+  transition: 1s;
+  transform: scale(0);
+  &._active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+._anotherStickySwipeElement{
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  transform: scale(0);
+  &._active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+// Бургер
+.burger {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: .3rem;
+  width: 100%;
+  background-color: $blueColor;
+  border-radius: 3rem;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+.burger span:nth-child(1) {
+  top: 0px;
+}
+
+.burger span:nth-child(2),.burger span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger span:nth-child(4) {
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+.header._menu-open {
+  .burger span:nth-child(1) {
+    top: 100%;
+    transform: translateY(-100%);
+    width: 0%;
+    left: 50%;
+  }
+
+  .burger span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+
+  .burger span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .burger span:nth-child(4) {
+    top: 100%;
+    transform: translateY(-100%);
+    width: 0%;
+    left: 50%;
+  }
+}

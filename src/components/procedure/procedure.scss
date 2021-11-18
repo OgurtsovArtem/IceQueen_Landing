@@ -1,0 +1,133 @@
+.procedure {
+  z-index: 2;
+  position: relative;
+  margin-top: -28.6rem;
+
+  @media (max-width: $iphoneMax) {
+    margin-top: -40rem;
+  }
+  // .procedure__container
+  &__container {
+    margin: 0 auto;
+    @media (min-width: $s) {
+      padding: 0 1rem;
+      max-width: 100rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    background-color: $whiteColor;
+    @media (max-width: $s) {
+      flex-direction: column;
+    }
+    @media (min-width: $s) {
+      box-shadow: 0rem 3.86rem 5.7rem -2.85rem rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  // .procedure__block
+
+  &__block {
+    @include adaptive-value("padding-top", 71, 48, 1);
+    @include adaptive-value("padding-bottom", 76, 22, 1);
+    @include adaptive-value("padding-right", 126, 15, 1);
+    @include adaptive-value("padding-left", 96, 15, 1);
+  }
+
+  // .procedure__title
+
+  &__title {
+    font-weight: bold;
+    line-height: 2.6rem;
+    letter-spacing: -0.02em;
+    @include adaptive-value("font-size", 30, 24, 1);
+  }
+
+  // .procedure__subtitle
+
+  &__subtitle {
+    font-weight: bold;
+    line-height: 1.86rem;
+    @include adaptive-value("font-size", 20, 16, 1);
+    @include adaptive-value("margin-top", 48, 14, 1);
+    // .procedure__subtitle_accent
+
+    &_accent {
+    }
+  }
+
+  // .procedure__focus
+
+  &__focus {
+    font-weight: 600;
+    font-size: 0.86rem;
+    line-height: 1.14rem;
+    padding: 0.64rem 0.57rem;
+    background-color: $grayColor;
+    box-shadow: 0rem 3.86rem 5.7rem -2.85rem rgba(0, 0, 0, 0.15);
+    border-radius: 1.42rem;
+    text-align: center;
+    max-width: 24.6rem;
+    margin-top: 1.35rem;
+  }
+
+  // .procedure__icons-block
+
+  &__icons-block {
+    display: flex;
+    justify-content: space-between;
+    @include adaptive-value("margin-top", 42, 30, 1);
+
+    @media (max-width: $m) {
+      flex-direction: column;
+    }
+  }
+
+  // .procedure__item
+
+  &__item {
+    display: flex;
+    max-width: 21.5rem;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+    @media (max-width: $m) {
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  // .procedure__item-icon
+
+  &__item-icon {
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  // .procedure__item-text
+
+  &__item-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.86rem;
+    line-height: 1.3rem;
+    margin-left: 2rem;
+  }
+
+  // procedure__block-request
+  &__block-request {
+    @media (max-width: $m) {
+      flex: 100%;
+    }
+    @media (min-width: $s) {
+      max-width: 38.6rem;
+      .request-average__form {
+        height: 100%;
+      }
+    }
+  }
+}
+
